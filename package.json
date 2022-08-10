@@ -1,7 +1,7 @@
 {
   "name": "react-native-du",
-  "version": "0.1.0",
-  "description": "test",
+  "version": "0.2.0",
+  "description": "A file download utility for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -33,7 +33,10 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "react-native-download-util",
+    "file download",
+    "react native download file"
   ],
   "repository": "https://github.com/whoami-shubham/react-native-du",
   "author": "shubham jha <whoamishubham@gmail.com> (https://github.com/whoami-shubham)",
