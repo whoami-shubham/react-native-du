@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 const LINKING_ERROR =
-  `The package 'react-native-download-util' doesn't seem to be linked. Make sure: \n\n` +
+  `The package 'react-native-du' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
@@ -34,13 +34,21 @@ function onErrorFn(error: any) {
   console.log(error);
 }
 
-export async function downloadFile(
-  url: string,
-  fileName: string,
-  desc: string = '',
-  onPermissionDenied: () => void = onPermissionDeniedFn,
-  onError: (error: any) => void = onErrorFn
-) {
+export type downloadFileFnType = {
+  url: string;
+  fileName: string;
+  desc?: string;
+  onPermissionDenied?: () => void;
+  onError?: (error: any) => void;
+};
+
+export async function downloadFile({
+  url,
+  fileName,
+  desc = '',
+  onPermissionDenied = onPermissionDeniedFn,
+  onError = onErrorFn,
+}: downloadFileFnType): Promise<string[] | void> {
   if (isiOS) {
     Linking.openURL(url);
   } else {
@@ -54,7 +62,9 @@ export async function downloadFile(
   }
 }
 
-export async function downloadStatus(downloadId: string) {
+export async function downloadStatus(
+  downloadId: string
+): Promise<string[] | void> {
   return DownloadUtil?.getDownloadStatus(downloadId);
 }
 
