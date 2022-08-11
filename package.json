@@ -1,6 +1,6 @@
 {
   "name": "react-native-du",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A file download utility for react native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
