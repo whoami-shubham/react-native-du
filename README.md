@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
 
 // ...
 
-const result = await multiply(3, 7);
 ```
 
 ## Contributing
