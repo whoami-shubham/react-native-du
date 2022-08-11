@@ -1,4 +1,8 @@
 # react-native-du
+![](https://badgen.net/bundlephobia/min/react-native-du)
+[![npm version](https://img.shields.io/npm/v/react-native-du.svg)](https://www.npmjs.com/package/react-native-du)
+[![npm](https://img.shields.io/npm/dt/react-native-du)](https://www.npmjs.com/package/react-native-du)
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 
 A file download utility for react native
 
