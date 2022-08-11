@@ -100,6 +100,18 @@ async function downloadStatus(downloadId: string)
 
 ```
 
+## Permissions
+
+You might have to add following permission in `AndroidManifest.xml` file
+
+```xml
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+```
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
